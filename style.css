@@ -3,23 +3,25 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #19e4fa;
+    background: #061379;
   }
   
   nav {
-    background-color: #a01ad5;
-    color: #fff;
+    background-color: hsl(210, 89%, 54%);
+    color: #15cce0;
   }
   
   nav ul {
     list-style: none;
     margin: 1%;
     padding: 0;
+    color: azure;
   }
   
   nav li {
     display: inline-block;
     margin: 1%;
+    color: azure;
   }
   
   nav a {
@@ -27,40 +29,48 @@ body {
     display: block;
     padding: 10px;
     text-decoration: none;
+    color: azure;
   }
   
   nav a:hover {
     background-color: #211bd1;
+    color: azure;
   }
   
   /* Page-Specific Styles */
   h1 {
     margin-top: 40px;
     margin-left: 50px;
+    color: azure;
   }
 
   h2 {
     margin-left: 50px;
+    color: azure;
   }
 
   label {
     margin-left: 50px;
+    color: azure;
   }
   
   p {
     line-height: 1.5;
     margin-bottom: 10px;
     margin-left: 50px;
+    color: azure;
   }
   
   ul {
     margin: 1%;
     padding: 0;
+    color: azure;
   }
   
   li {
     list-style: none;
     margin-bottom: 10px;
+    color: azure;
   }
   
   li a {
@@ -74,12 +84,12 @@ body {
   
   li a:hover {
     background-color: #130ce4;
+    color: azure;
   }
   
   p a{
-    background: #4d1387;
+    background: #810cf6;
     padding: 10px 18px;
-    text-decoration-color: #ff7200;
     font-weight: bold;
     color: azure;
     display: inline-block;
