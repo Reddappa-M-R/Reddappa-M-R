@@ -80,10 +80,11 @@ body {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    cursor: pointer;
   }
-  
+
   li a:hover {
-    background-color: #130ce4;
+    background-color: #142ff6;
     color: azure;
   }
   
