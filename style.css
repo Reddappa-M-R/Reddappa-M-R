@@ -1,110 +1,83 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #06142E; /* dark navy blue */
-    color: #D0E6FF; /* light blue text */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #06142E; /* dark navy blue */
+  color: #D0E6FF; /* light blue text */
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #0B3D91; /* dark blue */
-    color: #D0E6FF;
+  background-color: #0B3D91; /* dark blue */
 }
 
 nav ul {
-    list-style: none;
-    margin: 1%;
-    padding: 0;
+  list-style: none;
+  margin: 1%;
+  padding: 0;
+  text-align: left;
 }
 
 nav li {
-    display: inline-block;
-    margin: 1%;
+  display: inline-block;
+  margin: 0 15px;
 }
 
 nav a {
-    color: #D0E6FF;
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  color: #D0E6FF;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 nav a:hover {
-    background-color: #1456C4; /* lighter blue */
-    color: #ffffff;
-    border-radius: 4px;
+  background-color: #1456C4;
+  color: #ffffff;
 }
 
-/* Page-Specific Styles */
+/* Headings and Paragraphs */
+h1, h2, label, p {
+  margin-left: 50px;
+  color: #D0E6FF;
+}
+
 h1 {
-    margin-top: 40px;
-    margin-left: 50px;
-    color: #D0E6FF;
+  margin-top: 40px;
+  font-size: 2.4rem;
 }
 
 h2 {
-    margin-left: 50px;
-    color: #D0E6FF;
+  font-size: 1.8rem;
 }
 
 label {
-    margin-left: 50px;
-    color: #D0E6FF;
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 p {
-    line-height: 1.5;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    color: #D0E6FF;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 10px;
 }
 
-ul {
-    margin: 1%;
-    padding: 0;
-    color: #D0E6FF;
-}
-
-li {
-    list-style: none;
-    margin-bottom: 10px;
-    color: #D0E6FF;
-}
-
-/* Button-style list links */
-li a {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: #1B4CD0;
-    color: #FFFFFF;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-li a:hover {
-    background-color: #2196F3;
-    color: #ffffff;
-}
-
-/* Styled Paragraph Links (like social buttons) */
+/* Social and External Links */
 p a {
-    background: #1565C0; /* strong blue */
-    padding: 10px 18px;
-    font-weight: bold;
-    color: #FFFFFF;
-    display: inline-block;
-    margin: 10px 5px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  background: #1565C0;
+  padding: 10px 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  display: inline-block;
+  margin: 10px 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 p a:hover {
-    background: #2196F3; /* lighter blue */
+  background: #2196F3;
 }
