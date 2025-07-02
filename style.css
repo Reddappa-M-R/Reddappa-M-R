@@ -3,13 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #06142E; /* Deep dark blue */
-    color: #D0E6FF; /* Light blue text */
+    background: #06142E; /* dark navy blue */
+    color: #D0E6FF; /* light blue text */
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #0B3D91; /* Medium dark blue */
+    background-color: #0B3D91; /* dark blue */
+    color: #D0E6FF;
 }
 
 nav ul {
@@ -29,54 +30,55 @@ nav a {
     padding: 10px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #1456C4; /* Lighter blue on hover */
+    background-color: #1456C4; /* lighter blue */
+    color: #ffffff;
     border-radius: 4px;
 }
 
 /* Page-Specific Styles */
-h1, h2, label, p, ul, li {
+h1 {
+    margin-top: 40px;
     margin-left: 50px;
     color: #D0E6FF;
 }
 
-h1 {
-    margin-top: 40px;
-    font-size: 2.2rem;
-}
-
 h2 {
-    font-size: 1.8rem;
+    margin-left: 50px;
+    color: #D0E6FF;
 }
 
 label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
+    margin-left: 50px;
+    color: #D0E6FF;
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 10px;
-    max-width: 700px;
+    margin-left: 50px;
+    color: #D0E6FF;
 }
 
 ul {
     margin: 1%;
     padding: 0;
+    color: #D0E6FF;
 }
 
 li {
     list-style: none;
     margin-bottom: 10px;
+    color: #D0E6FF;
 }
 
-/* Button-like Links inside Lists */
+/* Button-style list links */
 li a {
     display: inline-block;
-    padding: 6px 14px;
+    padding: 6px 12px;
     background-color: #1B4CD0;
     color: #FFFFFF;
     text-decoration: none;
@@ -86,12 +88,13 @@ li a {
 }
 
 li a:hover {
-    background-color: #4285F4; /* Google blue tone */
+    background-color: #2196F3;
+    color: #ffffff;
 }
 
-/* Styled Paragraph Links (e.g., social links) */
+/* Styled Paragraph Links (like social buttons) */
 p a {
-    background: #1565C0;
+    background: #1565C0; /* strong blue */
     padding: 10px 18px;
     font-weight: bold;
     color: #FFFFFF;
@@ -103,5 +106,5 @@ p a {
 }
 
 p a:hover {
-    background: #2196F3;
+    background: #2196F3; /* lighter blue */
 }
