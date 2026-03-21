@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Portfolio - Reddappa M R</title>
-
+    <title>Portfolio | Reddappa M R</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">Reddappa M R</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: auto; padding-top: 150px; padding-bottom: 50px;">
+        <h1>Project Portfolio</h1>
+        <p class="subtitle">Data-Driven Solutions</p>
     </header>
 
-    <main>
-      <h1>Portfolio</h1>
+    <main class="container grid-layout">
+        <div class="project-card">
+            <img src="project1.jpg" alt="Car Price Prediction">
+            <div class="project-info">
+                <h2>Car Price Prediction</h2>
+                <p>ML regression model to estimate vehicle market value.</p>
+                <a href="project1.html" class="tag">View Details</a>
+            </div>
+        </div>
 
-      <ul>
-        <li>
-          <a href="project1.html">
-            <img src="project1.jpg" alt="Project 1">
-            <h2>Car price prediction</h2>
-          </a>
-        </li>
-        <li>
-          <a href="project2.html">
-            <img src="project2.jpg" alt="Project 2">
-            <h2>Telco customer churn</h2>
-          </a>
-        </li>
-      </ul>
+        <div class="project-card">
+            <img src="project2.jpg" alt="Customer Churn">
+            <div class="project-info">
+                <h2>Telco Customer Churn</h2>
+                <p>Analyzing customer behavior to predict and prevent churn.</p>
+                <a href="project2.html" class="tag">View Details</a>
+            </div>
+        </div>
     </main>
-
-    <footer>
-      <p>&copy; 2023 Reddappa M R</p>
-    </footer>
-  </body>
+</body>
 </html>

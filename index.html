@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>I am Data Engineer</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddappa M R | Data Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
 
-  <body>
-    <!-- Navigation Menu -->
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <div class="nav-logo">Reddappa M R</div>
+        <div class="nav-info-block">
+          <span class="nav-designation">Data Engineer</span>
+          <span class="nav-divider">|</span>
+          <span class="nav-greeting" id="greeting">Namaskaram 🙏</span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
     </nav>
 
-    <!-- Home Page -->
-    <h1>Home Page</h1>
-    <p>Welcome to my website!</p>
-    <h2>I am Reddappa M R</h2>
-    <p>git link <a href="https://github.com/Reddappa-M-R" target="_blank">here</a></p>
-    <p>Please find YouTube link <a href="https://www.youtube.com/@reddappartist" target="_blank">here</a></p>
-    <p>My LinkedIn account <a href="https://www.linkedin.com/in/r211/" target="_blank">LinkedIn</a></p>
-  </body>
+    <section class="hero">
+        <div class="logo-display">
+            <img src="Pic.jpg" alt="Reddappa M R">
+        </div>
+        <h1>Reddappa M R</h1>
+        <p class="subtitle">Data Engineer & Cloud Architect</p>
+        <div class="hero-btns">
+            <a href="portfolio.html" class="cta-button">Explore Portfolio</a>
+            <a href="contact.html" class="cta-button secondary" target="_blank">Get in touch</a>
+            <a href="resume.pdf" class="cta-button secondary" target="_blank">View Resume</a>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('mobile-active');
+        }
+
+        const greetingElement = document.getElementById('greeting');
+        const hour = new Date().getHours();
+
+        if (hour < 12) {
+            greetingElement.textContent = "Good Morning 🙏"; 
+        } else if (hour < 17) {
+            greetingElement.textContent = "Namaskaram 🙏";
+        } else {
+            greetingElement.textContent = "Good Evening 🙏";
+        }
+    </script>
+</body>
 </html>

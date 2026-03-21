@@ -1,28 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <!-- Navigation Menu -->
+    <title>About | Reddappa M R</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <div class="nav-logo">Reddappa M R</div>
+        
+        <div class="nav-info-block">
+            <span class="nav-designation">Data Engineer</span>
+            <span class="nav-divider">|</span>
+            <span class="nav-greeting" id="greeting">Namaskaram 🙏</span>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
     </nav>
 
-    <!-- About Me Section -->
-    <section>
-      <h1>About Me</h1>
-       <img src="/Gemini_Generated_Image_rusgd6rusgd6rusg.png" alt="logo" width="300">
-      <p>Hi, my name is Reddappa M R and I'm a Data Engineer I have over 2.5 years of experience in Data Engineer.</p>
-      <p>My expertise includes Python and Pyspark.</p>
-    </section>
-  </body>
+    <header class="hero" style="height: auto; padding-top: 150px; padding-bottom: 50px;">
+        <h1>The Journey</h1>
+        <p class="subtitle">DATA IS THE FUTURE</p>
+    </header>
+
+    <main class="container">
+        <section class="about-section">
+            <div class="about-text">
+                <div class="logo-display" style="width: 220px; height: 220px; margin: 0 auto 30px auto;">
+                    <img src="Pic.jpg" alt="Reddappa M R">
+                </div>
+                <h2>Behind the Pipelines</h2>
+                <p>I am a dedicated <strong>Data Engineer</strong> with over 2.5 years of experience in architecting robust data solutions. I specialize in building scalable ETL pipelines that turn raw data into high-value business intelligence.</p>
+                <p>With a deep focus on <strong>Python</strong> and <strong>PySpark</strong>, I bridge the gap between complex data sources and streamlined analytical environments.</p>
+            </div>
+        </section>
+
+        <section class="skills-grid">
+            <div class="skill-box">
+                <i class="fas fa-code"></i>
+                <h3>Core Tech</h3>
+                <ul>
+                    <li>Python Development</li>
+                    <li>PySpark (Big Data)</li>
+                    <li>SQL Performance Tuning</li>
+                    <li>ETL Pipeline Design</li>
+                </ul>
+            </div>
+
+            <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <h3>Data Infrastructure</h3>
+                <ul>
+                    <li>Data Warehousing</li>
+                    <li>Lakehouse Architecture</li>
+                    <li>Workflow Orchestration</li>
+                    <li>API Integrations</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="vision-box">
+            <blockquote>
+                "Engineering reliable data foundations for the future."
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>
+        <p style="text-align: center; color: #444; padding: 40px; font-size: 0.8rem;">
+            &copy; 2026 Reddappa M R | Truth is the only Authority
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('mobile-active');
+        }
+
+        const greetingElement = document.getElementById('greeting');
+        const hour = new Date().getHours();
+        if (hour < 12) greetingElement.textContent = "Good Morning 🙏"; 
+        else if (hour < 17) greetingElement.textContent = "Namaskaram 🙏";
+        else greetingElement.textContent = "Good Evening 🙏";
+    </script>
+</body>
 </html>

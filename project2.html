@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Project 2 - Telco customer churn</title>
-
+    <title>Telco Customer Churn | Reddappa M R</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div id="telco-customer-churn">
-      <h2>Telco Customer Churn</h2>
-      <p>This project uses classification algorithms to predict customer churn based on demographic and usage patterns. The dataset was sourced from kaggle and pre-processed using pandas and sklearn, predicted by the results.</p>
-      <img src="telco_customer_churn_chart.png" alt="Telco Customer Churn Chart">
-      <p>Code for this project can be found on <a href="https://github.com/Reddappa-M-R/Telco_Customer_churn">GitHub</a>.</p>
-    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">Reddappa M R</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html"class="active">Portfolio</a>
+        </div>
+    </nav>
 
-    <main>
-      <h1>Telco customer churn</h1>
+    <main class="container project-detail-page">
+        <header class="project-header">
+            <h1>Telco Customer Churn</h1>
+            <p class="subtitle">Classification & Predictive Analytics</p>
+        </header>
 
-      <img src="project2.jpg" alt="Project 2">
+        <section class="project-showcase">
+            <img src="telco_customer_churn_chart.png" alt="Churn Analysis Chart" class="main-project-img">
+            
+            <div class="project-description">
+                <h3>Project Overview</h3>
+                <p>Utilizing classification algorithms to identify customers at risk of leaving. This project analyzes demographic data and usage patterns to provide actionable insights for customer retention. Pre-processed with <strong>Pandas</strong> and modeled with <strong>SKLearn</strong>.</p>
+                
+                <div class="tech-stack">
+                    <span class="tag">Classification</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Predictive Modeling</span>
+                </div>
 
-      <p>Project.</p>
+                <a href="https://github.com/Reddappa-M-R/Telco_Customer_churn" target="_blank" class="cta-button">
+                    <i class="fab fa-github"></i> View Source Code
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Reddappa M R</p>
+        <p>&copy; 2026 Reddappa M R | Data Engineering</p>
     </footer>
-  </body>
+</body>
 </html>
