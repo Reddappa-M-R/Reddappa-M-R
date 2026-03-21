@@ -469,3 +469,358 @@ blockquote {
     blockquote { font-size: 1.4rem; }
     .skill-box { padding: 30px; }
 }
+
+/* --- RESUME SPECIFIC STYLES --- */
+.resume-view {
+    padding-top: 120px; /* Offset for fixed nav */
+    background: var(--dark-bg);
+}
+
+.resume-container {
+    display: grid;
+    grid-template-columns: 320px 1fr; /* Sidebar for contact/skills, Main for exp */
+    max-width: 1100px;
+    margin: 0 auto 80px auto;
+    background: var(--card-bg);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Sidebar (Left Column) */
+.resume-sidebar {
+    background: rgba(255, 255, 255, 0.02);
+    border-right: 1px solid rgba(212, 175, 55, 0.1);
+    padding: 50px 35px;
+}
+
+.resume-sidebar h3 {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin: 30px 0 15px 0;
+}
+
+.resume-contact-info {
+    font-size: 0.85rem;
+    color: #ccc;
+    list-style: none;
+}
+
+.resume-contact-info li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resume-contact-info i { color: var(--gold); }
+
+/* Main Content (Right Column) */
+.resume-main {
+    padding: 60px 70px;
+}
+
+.resume-header h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.resume-designation {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.resume-section {
+    margin-bottom: 40px;
+}
+
+.resume-section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.resume-section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(212, 175, 55, 0.5), transparent);
+}
+
+/* Experience & Project Items */
+.resume-item {
+    page-break-inside: avoid;
+    margin-bottom: 25px;
+}
+
+.resume-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.resume-item p {
+    font-size: 0.95rem;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* Resume Skill Chips */
+.resume-skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.resume-skill-tag {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: var(--gold);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+/* Print Handling */
+
+@media print {
+    /* Set page size to A4 and remove default browser margins */
+    @page {
+        size: A4;
+        margin: 10mm; /* Adjust margin as needed */
+    }
+
+    /* Reset body for printing */
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        -webkit-print-color-adjust: exact; /* Keeps background colors/icons */
+        print-color-adjust: exact;
+    }
+
+    /* Hide the Navigation Bar during print */
+    nav {
+        display: none !important;
+    }
+
+    /* Ensure the container takes full width of A4 */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .resume-container {
+        box-shadow: none; /* Remove shadows for clean print */
+        display: flex; /* Maintain your layout */
+        width: 210mm; /* Force A4 width */
+        min-height: 297mm; /* Force A4 height */
+    }
+
+    /* Optional: Prevents sections from breaking awkwardly across pages */
+    .resume-section {
+        page-break-inside: avoid;
+    }
+}
+ /* --- VARIABLES --- */
+:root {
+    --gold: #d4af37;
+    --dark-bg: #050510;
+    --card-bg: #0a0a1a;
+    --soft-white: #f4f4f4;
+    --sidebar-bg: #080818;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Dark gray for the browser preview background */
+    color: var(--soft-white);
+    line-height: 1.5;
+}
+
+/* --- UI ELEMENTS (HIDDEN ON PRINT) --- */
+.no-print-tools {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.download-btn {
+    background: var(--gold);
+    color: var(--dark-bg);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.download-btn:hover { transform: scale(1.05); }
+
+/* --- RESUME STRUCTURE --- */
+.resume-page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 40px auto;
+    background: var(--card-bg);
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Sidebar */
+.resume-sidebar {
+    background: var(--sidebar-bg);
+    border-right: 1px solid rgba(212, 175, 55, 0.1);
+    padding: 40px 30px;
+}
+
+.resume-sidebar h3 {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin: 25px 0 15px 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding-bottom: 5px;
+}
+
+.contact-list {
+    list-style: none;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.contact-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-list i { color: var(--gold); width: 15px; }
+
+/* Main Content */
+.resume-main {
+    padding: 50px 60px;
+    background: var(--card-bg);
+}
+
+.resume-header h1 {
+    font-size: 2.8rem;
+    background: linear-gradient(to bottom, #fcf6ba, #bf953f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.designation {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+}
+
+.resume-section {
+    margin-bottom: 35px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(212, 175, 55, 0.5), transparent);
+}
+
+.resume-item {
+    margin-bottom: 20px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--soft-white);
+}
+
+.resume-item p {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* Skill Badges */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-badge {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--gold);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+/* --- PRINT SETTINGS --- */
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    body { background: none; }
+    .no-print-tools { display: none; }
+    .resume-page {
+        margin: 0;
+        width: 210mm;
+        height: 297mm;
+        box-shadow: none;
+    }
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}

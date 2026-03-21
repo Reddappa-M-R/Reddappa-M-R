@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Reddappa M R</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="resume-view">
+
+    <nav>
+        <div class="nav-logo">Reddappa.MR</div>
+        <div class="nav-info-block">
+            <span class="nav-designation">Data Engineer</span>
+            <span class="nav-divider">|</span>
+            <span class="nav-greeting" id="greeting">Namaskaram 🙏</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#" class="active" onclick="window.print()">Print PDF</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="resume-container">
+            <aside class="resume-sidebar">
+                <div class="logo-display" style="width: 180px; height: 180px; margin: 0 auto 30px;">
+                    <img src="Pic.jpg" alt="Reddappa M R">
+                </div>
+
+                <div class="resume-contact-block">
+                    <h3>Contact</h3>
+                    <ul class="resume-contact-info">
+                        <li><i class="fas fa-envelope"></i> reddappa@gmail.com</li>
+                        <li><i class="fab fa-github"></i> Reddappa-M-R</li>
+                        <li><i class="fas fa-location-dot"></i> Karnataka, India</li>
+                    </ul>
+                </div>
+
+                <div class="resume-skills-block">
+                    <h3>Technical Stack</h3>
+                    <div class="resume-skills-grid">
+                        <span class="resume-skill-tag">Python</span>
+                        <span class="resume-skill-tag">PySpark</span>
+                        <span class="resume-skill-tag">SQL</span>
+                        <span class="resume-skill-tag">ETL</span>
+                        <span class="resume-skill-tag">AWS/Cloud</span>
+                        <span class="resume-skill-tag">Pandas</span>
+                        <span class="resume-skill-tag">Data Warehousing</span>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="resume-main">
+                <header class="resume-header">
+                    <h1>Reddappa M R</h1>
+                    <p class="resume-designation">Data Engineer | 2.5+ Years Experience</p>
+                </header>
+
+                <div class="resume-section">
+                    <h3 class="resume-section-title"><i class="fas fa-briefcase"></i> Experience</h3>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <span class="role">Data Engineer</span>
+                            <span class="duration">june/2023 — December/2025</span>
+                        </div>
+                        <p>Specializing in big data processing and automated ETL pipeline development. Expert in optimizing PySpark jobs for large-scale cloud data environments, ensuring 99.9% data reliability and significantly reducing processing latency.</p>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3 class="resume-section-title"><i class="fas fa-code-branch"></i> Key Projects</h3>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <span class="role">Car Price Prediction</span>
+                            <a href="https://github.com/Reddappa-M-R/carprices" class="gold-link">Source Code</a>
+                        </div>
+                        <p>Developed a regression model using Python and Scikit-Learn to estimate vehicle market values based on historical Kaggle datasets.</p>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <span class="role">Telco Customer Churn</span>
+                            <a href="https://github.com/Reddappa-M-R/Telco_Customer_churn" class="gold-link">Source Code</a>
+                        </div>
+                        <p>Architected a classification pipeline to predict user churn, helping businesses improve retention through usage pattern analysis.</p>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3 class="resume-section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <span class="role">Bachelor of Engineering</span>
+                            <span>Mechanical Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const greetingElement = document.getElementById('greeting');
+        const hour = new Date().getHours();
+        if (hour < 12) greetingElement.textContent = "Good Morning 🙏"; 
+        else if (hour < 17) greetingElement.textContent = "Namaskaram 🙏";
+        else greetingElement.textContent = "Good Evening 🙏";
+    </script>
+</body>
+</html>
