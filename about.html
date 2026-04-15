@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
 
     <nav>
         <div class="nav-logo">Reddappa M R</div>
-        
         <div class="nav-info-block">
             <span class="nav-designation">Data Engineer</span>
             <span class="nav-divider">|</span>
             <span class="nav-greeting" id="greeting">Namaskaram 🙏</span>
         </div>
-
         <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="about.html" class="active">About</a>
@@ -25,50 +25,50 @@
         <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
     </nav>
 
-    <header class="hero" style="height: auto; padding-top: 150px; padding-bottom: 50px;">
+    <header class="hero" style="height: auto; padding-top: 150px; padding-bottom: 40px;">
         <h1>The Journey</h1>
-        <p class="subtitle">DATA IS THE FUTURE</p>
+        <p class="subtitle">Engineering the Data Foundations</p>
     </header>
 
     <main class="container">
         <section class="about-section">
+            <div class="logo-display" style="width: 200px; height: 200px; margin: 0 auto 30px auto;">
+                <img src="Pic.jpg" alt="Reddappa M R">
+            </div>
             <div class="about-text">
-                <div class="logo-display" style="width: 220px; height: 220px; margin: 0 auto 30px auto;">
-                    <img src="Pic.jpg" alt="Reddappa M R">
-                </div>
                 <h2>Behind the Pipelines</h2>
-                <p>I am a dedicated <strong>Data Engineer</strong> with over 2.5 years of experience in architecting robust data solutions. I specialize in building scalable ETL pipelines that turn raw data into high-value business intelligence.</p>
-                <p>With a deep focus on <strong>Python</strong> and <strong>PySpark</strong>, I bridge the gap between complex data sources and streamlined analytical environments.</p>
+                <p>I am a dedicated <strong>Data Engineer</strong> with over 2.5 years of experience in Bengaluru's tech ecosystem. I specialize in architecting scalable ETL pipelines and turning raw complexity into streamlined business intelligence.</p>
+                <p>With a foundation in <strong>Mechanical Engineering</strong> and a passion for <strong>Big Data</strong>, I bridge the gap between physical logic and digital scale using Python, PySpark, and SQL.</p>
             </div>
         </section>
 
         <section class="skills-grid">
             <div class="skill-box">
-                <i class="fas fa-code"></i>
+                <i class="fas fa-microchip"></i>
                 <h3>Core Tech</h3>
                 <ul>
-                    <li>Python Development</li>
-                    <li>PySpark (Big Data)</li>
+                    <li>Python & PySpark</li>
                     <li>SQL Performance Tuning</li>
                     <li>ETL Pipeline Design</li>
+                    <li>Data Modeling</li>
                 </ul>
             </div>
 
             <div class="skill-box">
-                <i class="fas fa-database"></i>
-                <h3>Data Infrastructure</h3>
+                <i class="fas fa-cloud"></i>
+                <h3>Infrastructure</h3>
                 <ul>
-                    <li>Data Warehousing</li>
-                    <li>Lakehouse Architecture</li>
+                    <li>Cloud Architecture</li>
+                    <li>Lakehouse Platforms</li>
                     <li>Workflow Orchestration</li>
-                    <li>API Integrations</li>
+                    <li>API Development</li>
                 </ul>
             </div>
         </section>
 
         <section class="vision-box">
             <blockquote>
-                "Engineering reliable data foundations for the future."
+                "Building reliable data foundations for the future."
             </blockquote>
         </section>
     </main>
@@ -84,6 +84,7 @@
             document.getElementById('navLinks').classList.toggle('mobile-active');
         }
 
+        // Shared Greeting Logic
         const greetingElement = document.getElementById('greeting');
         const hour = new Date().getHours();
         if (hour < 12) greetingElement.textContent = "Good Morning 🙏"; 

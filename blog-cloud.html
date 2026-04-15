@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Architecture Notes | Reddappa M R</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Specific styles for blog readability */
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            color: #ddd;
+        }
+        .blog-content h2 {
+            color: #ffd700;
+            margin-top: 40px;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 10px;
+        }
+        .note-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #ffd700;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .tech-tag {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        .resource-link {
+            display: block;
+            color: #ffd700;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+        .resource-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <nav>
+        <div class="nav-logo">Reddappa M R</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="preparation.html">Back to Strategy</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: auto; padding-top: 100px; padding-bottom: 30px;">
+        <h1>Architecting AWS Pipelines</h1>
+        <p class="subtitle">Glue, Lambda, and Airflow Orchestration</p>
+    </header>
+
+    <main class="blog-content">
+        <section>
+            <h2>1. The Architecture Pattern</h2>
+            <p>In modern data engineering, we separate <strong>compute</strong> from <strong>storage</strong>. For this pipeline, we use S3 as our Data Lake (Bronze/Silver/Gold layers).</p>
+            <div class="note-box">
+                <strong>Workflow:</strong> Raw Data (S3) → Event Trigger (Lambda) → Transformation (AWS Glue/Spark) → Catalog (Glue Catalog) → Analytics (Athena/Redshift).
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Key Component Notes</h2>
+            
+            <h3><span class="tech-tag">AWS Glue</span> Serverless ETL</h3>
+            <ul>
+                <li>Use <strong>Dynamic Frames</strong> for nested JSON structures.</li>
+                <li>Implement <strong>Job Bookmarks</strong> to prevent reprocessing old data.</li>
+                <li>Optimize costs by using Flex execution for non-urgent jobs.</li>
+            </ul>
+
+            <h3><span class="tech-tag">AWS Lambda</span> The Event Trigger</h3>
+            <ul>
+                <li>Best for small file validation and triggering Glue jobs.</li>
+                <li>Keep execution time under 15 minutes; for longer tasks, pivot to Glue or ECS.</li>
+            </ul>
+
+            <h3><span class="tech-tag">Apache Airflow</span> Orchestration</h3>
+            <ul>
+                <li>Use the <strong>GlueJobOperator</strong> to trigger and monitor jobs.</li>
+                <li>Implement <strong>Retries</strong> and <strong>Alerts</strong> (SNS) for pipeline failures.</li>
+                <li>Managed Workflows (MWAA) is preferred to avoid infrastructure overhead.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Useful Resources & External Links</h2>
+            <div class="note-box">
+                <a href="https://skphd.medium.com/data-engineering-interview-questions-and-answers-0261f7763ff8" class="resource-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Data Engineering Interview Questions and Answers
+                </a>
+                <a href="https://www.datacamp.com/blog/top-21-data-engineering-interview-questions-and-answers" class="resource-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> The Top 39 Data Engineering Interview Questions and Answers in 2026
+                </a>
+                <a href="https://www.linkedin.com/pulse/mastering-data-engineering-interview-scenario-based-questions-sarkar-fjvpc/" class="resource-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Mastering Data Engineering Interview: Scenario-Based Questions and How to Answer Them
+                </a>
+                <a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-libraries.html" class="resource-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Official AWS Glue Programming Guide
+                </a>
+                <a href="https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/operators/glue.html" class="resource-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Airflow Glue Operators Documentation
+                </a>
+                <a href="https://github.com/awslabs/aws-glue-libs" class="resource-link" target="_blank">
+                    <i class="fab fa-github"></i> AWS Glue Python Libraries (GitHub)
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; opacity: 0.5;">
+        &copy; 2026 Reddappa M R | Bengaluru, India
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Foundations | Reddappa M R</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .blog-content { max-width: 800px; margin: 0 auto; padding: 40px 20px; line-height: 1.8; color: #ddd; }
+        .blog-content h2 { color: #ffd700; margin-top: 40px; border-bottom: 1px solid rgba(255, 215, 0, 0.3); padding-bottom: 10px; }
+        .note-box { background: rgba(255, 255, 255, 0.05); border-left: 4px solid #ffd700; padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0; }
+        .code-snippet { background: #111; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; color: #00d4ff; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <nav>
+        <div class="nav-logo">Reddappa M R</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="preparation.html">Back to Strategy</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: auto; padding-top: 100px; padding-bottom: 30px;">
+        <h1>Data Engineering Foundations</h1>
+        <p class="subtitle">Python Mastery & SQL Optimization</p>
+    </header>
+
+    <main class="blog-content">
+        <h2>1. Advanced Python for Data</h2>
+        <p>Data Engineers don't just write scripts; we write <strong>performant systems</strong>. Key areas include:</p>
+        <ul>
+            <li><strong>Decorators:</strong> Essential for logging, timing, and retry logic in ETL pipelines.</li>
+            <li><strong>Generators:</strong> Crucial for memory management when processing large flat files row-by-row.</li>
+            <li><strong>OOPs:</strong> Designing reusable data connectors and abstract base classes for different sources.</li>
+        </ul>
+        <div class="code-snippet">
+            # Example: Simple Timing Decorator<br>
+            def timer(func):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;def wrapper(*args, **kwargs):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start = time.time()<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = func(*args, **kwargs)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Time taken: {time.time()-start}")<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return result
+        </div>
+
+        <h2>2. SQL Optimization (Large Scale)</h2>
+        <div class="note-box">
+            Performance at scale is the difference between a query taking 2 seconds or 2 hours.
+        </div>
+        <ul>
+            <li><strong>Window Functions:</strong> Mastering <code>RANK()</code>, <code>LEAD()</code>, and <code>LAG()</code> for time-series analysis.</li>
+            <li><strong>CTEs vs Temp Tables:</strong> Using Common Table Expressions for readability and Temp Tables for performance in complex joins.</li>
+            <li><strong>Explain Plans:</strong> Identifying bottlenecks like Table Scans vs. Index Seeks.</li>
+        </ul>
+    </main>
+</body>
+</html>
