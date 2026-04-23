@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
     <div class="stars"></div>
     <div class="twinkling"></div>
@@ -38,22 +39,6 @@
             <a href="preparation.html" class="cta-button secondary" target="_blank">Data Engineer World</a>
         </div>
     </section>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('mobile-active');
-        }
-
-        const greetingElement = document.getElementById('greeting');
-        const hour = new Date().getHours();
-
-        if (hour < 12) {
-            greetingElement.textContent = "Good Morning 🙏"; 
-        } else if (hour < 17) {
-            greetingElement.textContent = "Namaskaram 🙏";
-        } else {
-            greetingElement.textContent = "Good Evening 🙏";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
